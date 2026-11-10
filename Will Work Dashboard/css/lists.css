@@ -1,0 +1,61 @@
+/* 5.13 - Player and activity lists */
+
+label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #172554;
+    color: white;
+}
+
+tr:hover {
+    background: #f1f5f9;
+}
+
+#activity-list {
+    list-style: none;
+    padding: 0;
+}
+
+#activity-list li {
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#activity-list span,
+#activity-list strong {
+    margin-right: 10px;
+}

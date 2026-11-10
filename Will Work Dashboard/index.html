@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game Server Administrator Dashboard</title>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/servers.css">
+    <link rel="stylesheet" href="css/lists.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Game Server Administrator Dashboard</h1>
+        <p>Monitor servers, search players and view recent activity.</p>
+    </header>
+
+    <main>
+
+        <!-- Server Overview -->
+        <section id="servers">
+            <h2>Server Overview</h2>
+
+            <div id="server-list"></div>
+        </section>
+
+        <!-- Player Search -->
+        <section id="players" class="players-section">
+            <h2>Player Management</h2>
+
+            <label for="player-search">Search by player name:</label>
+            <input
+                type="text"
+                id="player-search"
+                placeholder="Enter player name"
+            >
+
+            <label for="player-server">Filter by server:</label>
+            <select id="player-server">
+                <option value="">All Servers</option>
+                <option value="s1">Coast Survival</option>
+                <option value="s2">Battle Arena</option>
+                <option value="s3">Wildlands Server</option>
+            </select>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Player ID</th>
+                            <th>Player Name</th>
+                            <th>Server</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="player-rows">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section id="activity" class="activity-section">
+            <h2>Recent Activity</h2>
+
+            <label for="event-type">Filter activity:</label>
+            <select id="event-type">
+                <option value="">All Activities</option>
+                <option value="join">Player Joins</option>
+                <option value="leave">Player Leaves</option>
+                <option value="ban">Player Bans</option>
+            </select>
+
+            <ul id="activity-list"></ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Game Server Administrator Dashboard</p>
+    </footer>
+
+    <!-- Data files: load these first -->
+    <script src="data/servers.js"></script>
+    <script src="data/players.js"></script>
+    <script src="data/events.js"></script>
+
+    <!-- Feature files: load after the data -->
+    <script src="js/servers.js"></script>
+    <script src="js/players.js"></script>
+    <script src="js/player-search.js"></script>
+    <script src="js/player-server.js"></script>
+    <script src="js/activity.js"></script>
+    <script src="js/event-filter.js"></script>
+
+    <!-- Main application file: load last -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
